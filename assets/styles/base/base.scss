@@ -4,8 +4,8 @@ body {
   font-family: 'Roboto';
   font-weight: lighter;
 }
-header{
-  margin:20px;
+header {
+  margin: 20px;
 }
 .logo {
   width: 150px;
@@ -21,4 +21,25 @@ header{
   max-width: 100%;
   vertical-align: middle;
   margin-top: -20px
+}
+// Helpers
+.u-t-40{
+  margin-top: 40px;
+}
+.u-t-80{
+  margin-top: 80px;
+}
+// Stats
+.stat {
+  margin-bottom: 50px;
+  .stat_number {
+    color: #F9BF3B;
+    font-weight: 500;
+    font-size: 90px;
+    display: block;
+    line-height: 1.2em;
+  }
+  .stat_description {
+    color: rgba(255, 255, 255, .7);
+  }
 }

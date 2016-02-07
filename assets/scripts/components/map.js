@@ -8,7 +8,7 @@ const topojson = require('topojson');
 exports.india = function(target, options) {
 
     const defaults = {
-        width: 900,
+        width: 600,
         height: 600,
         colors: ['#FDE3A7', '#F9BF3B', '#F5AB35', '#F89406'],
         scale: 1000
