@@ -1,0 +1,39 @@
+{
+  "name": "darpan",
+  "version": "1.0.0",
+  "description": "make in India, Mumbai week",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 9000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravisuhag/darpan.git"
+  },
+  "keywords": [
+    "Make in India"
+  ],
+  "author": "Ravi Suhag",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ravisuhag/darpan/issues"
+  },
+  "homepage": "https://github.com/ravisuhag/darpan#readme",
+  "dependencies": {
+    "d3": "^3.5.6",
+    "metrics-graphics": "^2.6.0",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0",
+    "require-dir": "^0.3.0",
+    "webpack": "^1.12.1"
+  }
+}
