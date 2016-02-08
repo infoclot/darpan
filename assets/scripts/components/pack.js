@@ -5,7 +5,7 @@ const d3 = require('d3');
 exports.circles = function(target, options) {
     //  Sample Data
     var root = {
-        'name': 'flare',
+        'name': 'root',
         'children': [{
             'name': 'analytics',
             'size': 1640
@@ -15,6 +15,18 @@ exports.circles = function(target, options) {
         }, {
             'name': 'iuonkj',
             'size': 3640
+        }, {
+            'name': 'iuonkj',
+            'size': 3640
+        }, {
+            'name': 'iuonkj',
+            'size': 340
+        }, {
+            'name': 'iuonkj',
+            'size': 4640
+        }, {
+            'name': 'iuonkj',
+            'size': 360
         }]
     };
 
@@ -25,7 +37,7 @@ exports.circles = function(target, options) {
     options = defaults;
 
     const format = d3.format(',d'),
-        color = d3.scale.category20c();
+        color = d3.scale.category10();
 
 
     var svg = d3.select(target).append('svg')
