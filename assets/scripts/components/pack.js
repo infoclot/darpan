@@ -10,7 +10,7 @@ exports.circles = function(target, data, options) {
     };
     console.log(data);
     const defaults = {
-        diameter: 560,
+        diameter: 960,
         padding: 8
     };
     options = defaults;
@@ -48,11 +48,15 @@ exports.circles = function(target, data, options) {
             return color(d.value);
         });
 
+    node.append('title')
+      .text(function(d) { return d.className + ': ' + format(d.value); });
+
+
     node.append('text')
         .attr('dy', '.3em')
         .style('text-anchor', 'middle')
         .text(function(d) {
-            return d.className.substring(0, d.r / 3);
+            return d.className.substring(0, d.r / 4);
         });
 
 

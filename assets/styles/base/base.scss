@@ -23,10 +23,10 @@ header {
   margin-top: -20px
 }
 // Helpers
-.u-t-40{
+.u-t-40 {
   margin-top: 40px;
 }
-.u-t-80{
+.u-t-80 {
   margin-top: 80px;
 }
 // Stats
@@ -44,5 +44,7 @@ header {
   }
 }
 text {
-  font: 10px;
+  font-size: 12px;
+  stroke: #fff;
+  stroke-width: 0.5
 }
