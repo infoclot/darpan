@@ -1,9 +1,9 @@
 'use strict';
 
 const D3 = require('d3');
-const Maps = require('../components/map');
-const Pack = require('../components/pack');
-const DataLoader = require('../lib/data_loader');
+const Maps = require('../components/maps');
+const Charts = require('../components/charts');
+const Parser = require('../lib/parser');
 
 
 function initHome() {
@@ -13,15 +13,15 @@ function initHome() {
         })
         .get(function(error, data) {
 
-            var mapData = DataLoader(data, 'State', 'Training target', false);
+            var mapData = Parser(data, 'State', 'Training target', false);
             Maps.india('#map', mapData, {
                 onClick: function(d) {
                     window.location = '/state.html?State=' + d.properties.state_name;
                 }
             });
 
-            var sectorData = DataLoader(data, 'Sector', 'Training target', true);
-            Pack.circles('#bubble', sectorData, {
+            var sectorData = Parser(data, 'Sector', 'Training target', true);
+            Charts.bubblek('#bubble', sectorData, {
                 onClick: function(d) {
                     window.location = '/sector.html?Sector=' + d.className;
                 }

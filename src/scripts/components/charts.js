@@ -2,7 +2,7 @@
 
 const d3 = require('d3');
 
-exports.circles = function(target, data, options) {
+exports.bubble = function(target, data, options) {
     //  Sample Data
     var root = {
         'name': 'root',
