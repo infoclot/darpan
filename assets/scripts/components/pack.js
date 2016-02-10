@@ -2,34 +2,13 @@
 
 const d3 = require('d3');
 
-exports.circles = function(target, options) {
+exports.circles = function(target, data, options) {
     //  Sample Data
     var root = {
         'name': 'root',
-        'children': [{
-            'name': 'analytics',
-            'size': 1640
-        }, {
-            'name': 'Visualization',
-            'size': 16540
-        }, {
-            'name': 'iuonkj',
-            'size': 3640
-        }, {
-            'name': 'iuonkj',
-            'size': 3640
-        }, {
-            'name': 'iuonkj',
-            'size': 340
-        }, {
-            'name': 'iuonkj',
-            'size': 4640
-        }, {
-            'name': 'iuonkj',
-            'size': 360
-        }]
+        'children': data
     };
-
+    console.log(data);
     const defaults = {
         diameter: 560,
         padding: 8
@@ -87,8 +66,8 @@ exports.circles = function(target, options) {
             });
             else classes.push({
                 packageName: name,
-                className: node.name,
-                value: node.size
+                className: node.Sector,
+                value: node.value
             });
         }
 

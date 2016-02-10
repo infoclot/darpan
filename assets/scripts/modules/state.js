@@ -13,10 +13,9 @@ function initHome() {
         })
         .get(function(error, data) {
 
-            var sectorData = DataLoader(data, 'Sector', 'Training target');
-
+            var mapData = DataLoader(data, 'state_code', 'valx');
             Maps.india('#map');
-            Pack.circles('#bubble', sectorData);
+            Pack.circles('#bubble');
         });
 }
 if (window.location.pathname === '/') {

@@ -5,7 +5,7 @@ const d3 = require('d3');
 const topojson = require('topojson');
 
 
-exports.india = function(target, options) {
+exports.india = function(target,data,  options) {
 
     const defaults = {
         width: 600,

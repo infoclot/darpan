@@ -18,7 +18,7 @@ module.exports = function(data, base, variance) {
     });
     // Prepare array from object
     for (var key in hist) {
-        hist[key][variance + '_per'] = (hist[key][variance] / varianceTotal) * 100;
+        hist[key].value = (hist[key][variance] / varianceTotal) * 100;
         result.push(hist[key]);
     }
 
