@@ -1,8 +1,13 @@
 'use strict';
 
-module.exports = function() {
-    // This function is anonymous, is executed immediately and 
-    // the return value is assigned to QueryString!
+exports.screen = function() {
+    return {
+        width: window.innerWidth,
+        height: window.innerHeight
+    };
+};
+
+exports.query = function() {
     var query_string = {};
     var query = window.location.search.substring(1);
     var vars = query.split('&');

@@ -7,10 +7,10 @@ const topojson = require('topojson');
 
 exports.india = function(target, data, options) {
     const defaults = {
-        width: 600,
-        height: 600,
+        width: 650,
+        height: 750,
         colors: ['#FDE3A7', '#F9BF3B', '#F5AB35', '#F89406'],
-        scale: 1000
+        scale: 1100
     };
     // Merge options
     if (!options) options = {};
@@ -19,7 +19,6 @@ exports.india = function(target, data, options) {
             options[key] = defaults[key];
         }
     }
-    console.log(options);
     if (!target) console.log('No target is present');
     const bounds = ([3, 5, 10, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);

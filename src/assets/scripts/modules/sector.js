@@ -15,7 +15,12 @@ function initSector() {
         .get(function(error, data) {
 
             var mapData = DataLoader(data, 'State', 'Training target', false, QueryString());
-            Maps.india('#map', mapData);
+            Maps.india('#map', mapData, {
+                onClick: function(d) {
+                    // window.location = '/centers.html?State=' + d.properties.state_name;
+                    console.log(d);
+                }
+            });
 
         });
 }

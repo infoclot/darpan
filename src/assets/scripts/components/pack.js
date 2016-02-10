@@ -9,7 +9,7 @@ exports.circles = function(target, data, options) {
         'children': data
     };
     const defaults = {
-        diameter: 960,
+        diameter: 750,
         padding: 8
     };
     if (!options) options = {};
