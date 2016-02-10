@@ -3,7 +3,9 @@
 exports.screen = function() {
     return {
         width: window.innerWidth,
-        height: window.innerHeight
+        height: window.innerHeight,
+        canvasHeight: window.innerHeight - 140,
+        canvasWidth: window.innerWidth / 2 - 30
     };
 };
 

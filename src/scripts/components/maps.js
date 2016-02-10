@@ -1,11 +1,12 @@
 'use strict';
 
-const states_cens = require('../data/states_topo')();
+const states_cens = require('../lib/india')();
 const d3 = require('d3');
 const topojson = require('topojson');
 
 
 exports.india = function(target, data, options) {
+
     const defaults = {
         width: 650,
         height: 750,
