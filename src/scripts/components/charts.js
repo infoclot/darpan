@@ -7,7 +7,7 @@ exports.bubble = function(options) {
     const defaults = {
         diameter: 750,
         padding: 8,
-        colors: ['#bbb', '#aaa', '#888', '#51368F'],
+        colors: ['#aaa', '#999', '#666', '#51368F'],
     };
     if (!options) options = {};
     for (var key in defaults) {
@@ -23,7 +23,7 @@ exports.bubble = function(options) {
     };
 
     const format = d3.format(',d');
-    const bounds = ([3, 5, 10, 10000]);
+    const bounds = ([3, 4, 6, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);
 
     var svg = d3.select(options.target).append('svg')
