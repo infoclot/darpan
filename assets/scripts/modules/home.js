@@ -13,9 +13,10 @@ function initHome() {
         })
         .get(function(error, data) {
 
-            var sectorData = DataLoader(data, 'Sector', 'Training target');
+            var mapData = DataLoader(data, 'State', 'Training target', false);
+            Maps.india('#map', mapData);
 
-            Maps.india('#map');
+            var sectorData = DataLoader(data, 'Sector', 'Training target', true);
             Pack.circles('#bubble', sectorData);
         });
 }

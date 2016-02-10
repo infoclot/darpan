@@ -16,7 +16,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 14,
-                        "state_name": "Jammu & Kashmir"
+                        "state_name": "Jammu_Kashmir"
                     }
                 }, {
                     "type": "Polygon",
@@ -70,7 +70,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 31,
-                        "state_name": "Uttar Pradesh"
+                        "state_name": "UttarPradesh"
                     }
                 }, {
                     "type": "Polygon",
@@ -133,7 +133,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -152,7 +152,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 17,
-                        "state_name": "Madhya Pradesh"
+                        "state_name": "MadhyaPradesh"
                     }
                 }, {
                     "type": "Polygon",
@@ -188,7 +188,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 31,
-                        "state_name": "Uttar Pradesh"
+                        "state_name": "UttarPradesh"
                     }
                 }, {
                     "type": "Polygon",
@@ -242,7 +242,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 24,
-                        "state_name": "Orissa"
+                        "state_name": "Odisha"
                     }
                 }, {
                     "type": "Polygon",
@@ -251,7 +251,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -260,7 +260,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -269,7 +269,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -278,7 +278,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -287,7 +287,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -296,7 +296,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -315,7 +315,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -333,7 +333,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -342,7 +342,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -351,7 +351,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -360,7 +360,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -369,7 +369,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -378,7 +378,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -387,7 +387,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -396,7 +396,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -405,7 +405,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -414,7 +414,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -423,7 +423,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -432,7 +432,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -441,7 +441,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -450,7 +450,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -459,7 +459,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -468,7 +468,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -477,7 +477,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -486,7 +486,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -495,7 +495,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -504,7 +504,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -513,7 +513,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -522,7 +522,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -531,7 +531,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -540,7 +540,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -558,7 +558,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -567,7 +567,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -576,7 +576,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -585,7 +585,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -594,7 +594,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -603,7 +603,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 32,
-                        "state_name": "West Bengal"
+                        "state_name": "WestBengal"
                     }
                 }, {
                     "type": "Polygon",
@@ -703,7 +703,7 @@ module.exports = function() {
                     ],
                     "properties": {
                         "state_id": 29,
-                        "state_name": "Tamil Nadu"
+                        "state_name": "TamilNadu"
                     }
                 }, {
                     "type": "Polygon",

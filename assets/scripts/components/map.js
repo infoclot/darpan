@@ -5,8 +5,7 @@ const d3 = require('d3');
 const topojson = require('topojson');
 
 
-exports.india = function(target,data,  options) {
-
+exports.india = function(target, data, options) {
     const defaults = {
         width: 600,
         height: 600,
@@ -16,8 +15,8 @@ exports.india = function(target,data,  options) {
     // Merge options instead of overwrite
     options = defaults;
     if (!target) console.log('No target is present');
-
-    const bounds = ([20, 40, 80, 100]);
+    console.log(data);
+    const bounds = ([3, 5, 10, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);
     const svg = d3.select(target).append('svg')
         .attr('width', options.width)
@@ -36,8 +35,8 @@ exports.india = function(target,data,  options) {
         .data(topojson.feature(states_cens, states_cens.objects.states).features)
         .enter().append('path')
         .attr('d', path)
-        .style('fill', function(d, i) {
-            return color(d.properties.state_id) || '#FDE3A7';
+        .style('fill', function(d, i) {            
+            return data[d.properties.state_name] ? color(data[d.properties.state_name].value) : '#FDF3FA';
         })
         .attr('class', 'state')
         .attr('id', function(d, i) {
