@@ -15,7 +15,6 @@ exports.india = function(target, data, options) {
     // Merge options instead of overwrite
     options = defaults;
     if (!target) console.log('No target is present');
-    console.log(data);
     const bounds = ([3, 5, 10, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);
     const svg = d3.select(target).append('svg')
@@ -35,7 +34,7 @@ exports.india = function(target, data, options) {
         .data(topojson.feature(states_cens, states_cens.objects.states).features)
         .enter().append('path')
         .attr('d', path)
-        .style('fill', function(d, i) {            
+        .style('fill', function(d, i) {
             return data[d.properties.state_name] ? color(data[d.properties.state_name].value) : '#FDF3FA';
         })
         .attr('class', 'state')
@@ -54,6 +53,9 @@ exports.india = function(target, data, options) {
         })
         .on('mouseout', function() {
             d3.select(this).style('fill-opacity', 1);
+        })
+        .on('click', function(d) {
+            window.location = '/state.html?State=' + d.properties.state_name;
         });
 
     // Add state boundries
@@ -69,8 +71,5 @@ exports.india = function(target, data, options) {
         .style('stroke-linejoin', 'round')
         .style('stroke-linecap', 'round')
         .style('pointer-events', 'none');
-
-
-
 
 };

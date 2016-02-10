@@ -4,6 +4,7 @@ const D3 = require('d3');
 const Maps = require('../components/map');
 const Pack = require('../components/pack');
 const DataLoader = require('../lib/data_loader');
+const QueryString = require('../lib/query_string');
 
 
 function initHome() {
@@ -13,11 +14,11 @@ function initHome() {
         })
         .get(function(error, data) {
 
-            var mapData = DataLoader(data, 'state_code', 'valx');
-            Maps.india('#map');
-            Pack.circles('#bubble');
+            var sectorData = DataLoader(data, 'Sector', 'Training target', true, QueryString());
+            Pack.circles('#bubble', sectorData);
+
         });
 }
-if (window.location.pathname === '/') {
+if (window.location.pathname === '/state.html') {
     initHome();
 }
