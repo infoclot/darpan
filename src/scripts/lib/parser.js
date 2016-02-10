@@ -1,8 +1,14 @@
 'use strict';
 
-module.exports = function(data, base, variance, returnArr, filters) {
+module.exports = function(options) {
+
+    var data = options.data,
+        base = options.base,
+        variance = options.variance,
+        type = options.returnArr,
+        filters = options.filters;
+
     var varianceTotal = 0;
-    var Data = [];
     var hist = {};
     var result = [];
     // Group by base and reduce by variance
@@ -33,5 +39,5 @@ module.exports = function(data, base, variance, returnArr, filters) {
         hist[key].value = (hist[key][variance] / varianceTotal) * 100;
         result.push(hist[key]);
     }
-    return returnArr ? result : hist;
+    return type === 'array' ? result : hist;
 };

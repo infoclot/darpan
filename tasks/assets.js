@@ -38,3 +38,8 @@ Gulp.task('fonts', function() {
     return Gulp.src('./src/assets/fonts')
         .pipe(Gulp.dest('.build/fonts'));
 });
+
+Gulp.task('store', function() {
+    return Gulp.src('./store/*')
+        .pipe(Gulp.dest('.build/store'));
+});
