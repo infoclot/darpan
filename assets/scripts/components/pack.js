@@ -48,7 +48,7 @@ exports.circles = function(target, data, options) {
         })
         .style('cursor', 'pointer')
         .on('click', function(d) {
-            window.location = '/sector.html?sector='+ d.className;
+            window.location = '/sector.html?Sector='+ d.className;
         });
 
     node.append('title')
