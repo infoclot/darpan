@@ -5,7 +5,7 @@ module.exports = function(options) {
     var data = options.data,
         base = options.base,
         variance = options.variance,
-        type = options.returnArr,
+        type = options.type,
         filters = options.filters;
 
     var varianceTotal = 0;

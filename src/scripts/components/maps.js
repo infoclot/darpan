@@ -5,8 +5,7 @@ const d3 = require('d3');
 const topojson = require('topojson');
 
 
-exports.india = function(target, data, options) {
-
+exports.india = function(options) {
     const defaults = {
         width: 650,
         height: 750,
@@ -20,10 +19,12 @@ exports.india = function(target, data, options) {
             options[key] = defaults[key];
         }
     }
-    if (!target) console.log('No target is present');
+    if (!options.target) console.log('No options.target is present');
+    
+    var data = options.data;
     const bounds = ([3, 5, 10, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);
-    const svg = d3.select(target).append('svg')
+    const svg = d3.select(options.target).append('svg')
         .attr('width', options.width)
         .attr('height', options.height);
 

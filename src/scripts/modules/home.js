@@ -14,6 +14,9 @@ exports.init = function() {
         })
         .get(function(error, data) {
 
+            var h = Meta.screen().canvasHeight;
+            var w = Meta.screen().canvasWidth;
+
             var mapData = Parser({
                 data: data,
                 base: 'State',
@@ -21,22 +24,33 @@ exports.init = function() {
                 type: 'object'
             });
 
-            Maps.india('#map', mapData, {
-                height: Meta.screen().canvasHeight,
-                width: Meta.screen().canvasWidth,
-                scale: Meta.screen().canvasHeight * 1.5,
+            Maps.india({
+                data: mapData,
+                target: '#map',
+                height: h,
+                width: w,
+                scale: h > w ? w * 1.5 : h * 1.5,
                 onClick: function(d) {
                     window.location = '/state.html?State=' + d.properties.state_name;
                 }
             });
 
-            // var sectorData = Parser(data, 'Sector', 'Training target', true);
-            // Charts.bubblek('#bubble', sectorData, {
-            //     onClick: function(d) {
-            //         window.location = '/sector.html?Sector=' + d.className;
-            //     }
-            // });
-        });
+            var sectorData = Parser({
+                data: data,
+                base: 'Sector',
+                variance: 'Training target',
+                type: 'array'
+            });
 
+            Charts.bubble({
+                target: '#bubble',
+                data: sectorData,
+                diameter: h > w ? w : h,
+                onClick: function(d) {
+                    window.location = '/sector.html?Sector=' + d.className;
+                }
+            });
+
+        });
 
 };

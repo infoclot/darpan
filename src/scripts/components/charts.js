@@ -2,12 +2,8 @@
 
 const d3 = require('d3');
 
-exports.bubble = function(target, data, options) {
-    //  Sample Data
-    var root = {
-        'name': 'root',
-        'children': data
-    };
+exports.bubble = function(options) {
+
     const defaults = {
         diameter: 750,
         padding: 8
@@ -19,11 +15,16 @@ exports.bubble = function(target, data, options) {
         }
     }
 
+    var data = options.data;
+    var root = {
+        'name': 'root',
+        'children': data
+    };
+
     const format = d3.format(',d'),
         color = d3.scale.category10();
 
-
-    var svg = d3.select(target).append('svg')
+    var svg = d3.select(options.target).append('svg')
         .attr('width', options.diameter)
         .attr('height', options.diameter)
         .attr('class', 'bubble');
