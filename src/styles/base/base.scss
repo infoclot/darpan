@@ -1,6 +1,7 @@
 body {
-  background-color: #51368F;
+  // background-color: #51368F;
   color: #fff;
+  color: #444;
   font-family: 'Roboto';
   font-weight: lighter;
 }
@@ -11,19 +12,13 @@ header {
   max-width: 100%
 }
 .logo {
-  width: 100px;
-  height: 100px;
-  padding: 2px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #fff;
-  vertical-align: middle;
-  display: table-cell;
+  display: block;
+  width: 230px;
 }
 .logo img {
   max-width: 100%;
   vertical-align: middle;
-  margin-top: -20px
+  margin-top: -20px;
 }
 // Helpers
 .u-t-40 {

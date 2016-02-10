@@ -9,7 +9,7 @@ exports.india = function(options) {
     const defaults = {
         width: 650,
         height: 750,
-        colors: ['#FDE3A7', '#F9BF3B', '#F5AB35', '#F89406'],
+        colors: ['#ccc', '#999', '#666', '#333'],
         scale: 1100
     };
     // Merge options
@@ -42,7 +42,7 @@ exports.india = function(options) {
         .enter().append('path')
         .attr('d', path)
         .style('fill', function(d, i) {
-            return data[d.properties.state_name] ? color(data[d.properties.state_name].value) : '#FDF3FA';
+            return data[d.properties.state_name] ? color(data[d.properties.state_name].value) : '#eee';
         })
         .attr('class', 'state')
         .attr('id', function(d, i) {
