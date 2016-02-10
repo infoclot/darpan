@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function(data, base, variance, returnArr, filters) {
-    console.log(filters);
     var varianceTotal = 0;
     var Data = [];
     var hist = {};

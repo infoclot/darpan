@@ -14,10 +14,18 @@ function initHome() {
         .get(function(error, data) {
 
             var mapData = DataLoader(data, 'State', 'Training target', false);
-            Maps.india('#map', mapData);
+            Maps.india('#map', mapData, {
+                onClick: function(d) {
+                    window.location = '/state.html?State=' + d.properties.state_name;
+                }
+            });
 
             var sectorData = DataLoader(data, 'Sector', 'Training target', true);
-            Pack.circles('#bubble', sectorData);
+            Pack.circles('#bubble', sectorData, {
+                onClick: function(d) {
+                    window.location = '/sector.html?Sector=' + d.className;
+                }
+            });
         });
 }
 if (window.location.pathname === '/') {

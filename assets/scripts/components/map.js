@@ -12,8 +12,14 @@ exports.india = function(target, data, options) {
         colors: ['#FDE3A7', '#F9BF3B', '#F5AB35', '#F89406'],
         scale: 1000
     };
-    // Merge options instead of overwrite
-    options = defaults;
+    // Merge options
+    if (!options) options = {};
+    for (var key in defaults) {
+        if (!options.hasOwnProperty(key)) {
+            options[key] = defaults[key];
+        }
+    }
+    console.log(options);
     if (!target) console.log('No target is present');
     const bounds = ([3, 5, 10, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);
@@ -54,9 +60,7 @@ exports.india = function(target, data, options) {
         .on('mouseout', function() {
             d3.select(this).style('fill-opacity', 1);
         })
-        .on('click', function(d) {
-            window.location = '/state.html?State=' + d.properties.state_name;
-        });
+        .on('click', options.onClick);
 
     // Add state boundries
     svg.append('path')

@@ -12,7 +12,12 @@ exports.circles = function(target, data, options) {
         diameter: 960,
         padding: 8
     };
-    options = defaults;
+    if (!options) options = {};
+    for (var key in defaults) {
+        if (!options.hasOwnProperty(key)) {
+            options[key] = defaults[key];
+        }
+    }
 
     const format = d3.format(',d'),
         color = d3.scale.category10();
@@ -47,12 +52,12 @@ exports.circles = function(target, data, options) {
             return color(d.value);
         })
         .style('cursor', 'pointer')
-        .on('click', function(d) {
-            window.location = '/sector.html?Sector='+ d.className;
-        });
+        .on('click', options.onClick);
 
     node.append('title')
-      .text(function(d) { return d.className + ': ' + format(d.value); });
+        .text(function(d) {
+            return d.className + ': ' + format(d.value);
+        });
 
 
     node.append('text')

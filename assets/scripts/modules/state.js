@@ -14,6 +14,8 @@ function initState() {
         })
         .get(function(error, data) {
 
+            D3.select('#state_name').text(QueryString().State);
+
             var sectorData = DataLoader(data, 'Sector', 'Training target', true, QueryString());
             Pack.circles('#bubble', sectorData);
 
