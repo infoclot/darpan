@@ -12,7 +12,7 @@ Gulp.task('webpack', function() {
     var config = {
         entry: {
             vendor: ['jquery', 'd3'],
-            app: './assets/scripts/index.js'
+            app: './src/scripts/index.js'
         },
         watch: true,
         cache: true,

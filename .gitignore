@@ -28,8 +28,9 @@ node_modules
 *.sublime-workspace
 
 # Project  specific ignores
-data
+store
 dist
+.build
 
 
 

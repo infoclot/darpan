@@ -6,13 +6,12 @@ const BrowserSync = require('browser-sync').create();
 Gulp.task('browsersync', function() {
     BrowserSync.init({
         server: {
-            baseDir: './'
+            baseDir: '.build'
         }
     });
 
-    Gulp.watch('assets/styles/**/*', ['styles']);
-    Gulp.watch('assets/**/*').on('change', BrowserSync.reload);
-    Gulp.watch('/*.html').on('change', BrowserSync.reload);
-
+    Gulp.watch('src/styles/**/*', ['styles']);
+    Gulp.watch('src/*.html', ['html']);
+    Gulp.watch('.build/**/*').on('change', BrowserSync.reload);
 
 });

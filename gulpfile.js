@@ -7,7 +7,7 @@ var requireDir = require('require-dir');
 requireDir('./tasks');
 
 //  Build task definition 
-Gulp.task('dev-build', ['fonts', 'images', 'misc', 'styles', 'webpack']);
+Gulp.task('dev-build', ['html', 'fonts', 'images', 'misc', 'styles', 'webpack']);
 Gulp.task('prod-build', ['dev-build', 'rev']);
 
 Gulp.task('dev', ['dev-build', 'browsersync']);
