@@ -8,7 +8,6 @@ exports.circles = function(target, data, options) {
         'name': 'root',
         'children': data
     };
-    console.log(data);
     const defaults = {
         diameter: 960,
         padding: 8
@@ -46,6 +45,10 @@ exports.circles = function(target, data, options) {
         })
         .style('fill', function(d) {
             return color(d.value);
+        })
+        .style('cursor', 'pointer')
+        .on('click', function(d) {
+            window.location = '/sector.html?sector='+ d.className;
         });
 
     node.append('title')
