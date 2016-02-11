@@ -5,6 +5,7 @@ const Parser = require('../lib/parser');
 const Meta = require('../lib/meta');
 const Maps = require('../components/maps');
 const Charts = require('../components/charts');
+const Info = require('../components/info');
 
 
 exports.init = function() {
@@ -19,7 +20,7 @@ exports.init = function() {
             var h = Meta.screen().canvasHeight;
             var w = Meta.screen().canvasWidth;
 
-            var sectorData = Parser({
+            var sectorData = Parser.base({
                 data: data,
                 base: 'Sector',
                 variance: 'Training target',
@@ -32,7 +33,17 @@ exports.init = function() {
                 data: sectorData,
                 diameter: h > w ? w : h,
                 onClick: function(d) {
-                    // window.location = '/sector.html?Sector=' + d.className;
+
+                    var filter = Meta.query();
+                    filter.Sector = d.className;
+                    var infoData = Parser.info({
+                        data: data,
+                        filter: filter
+                    });
+                    Info.table({
+                        target: '#info',
+                        data: infoData
+                    });
                 }
             });
 

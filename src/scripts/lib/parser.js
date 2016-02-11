@@ -1,12 +1,12 @@
 'use strict';
 
-module.exports = function(options) {
+exports.base = function(options) {
 
     var data = options.data,
         base = options.base,
         variance = options.variance,
         type = options.type,
-        filters = options.filters;
+        filters = options.filter;
 
     var varianceTotal = 0;
     var hist = {};
@@ -16,9 +16,11 @@ module.exports = function(options) {
 
         var query = true;
         if (filters) {
+
             for (var filterkey in filters) {
                 if (row[filterkey] !== filters[filterkey]) {
                     query = false;
+
                 }
             }
         }
@@ -40,4 +42,28 @@ module.exports = function(options) {
         result.push(hist[key]);
     }
     return type === 'array' ? result : hist;
+};
+
+exports.info = function(options) {
+
+    var data = options.data,
+        filter = options.filter;
+
+    var result = [];
+
+    data.map(function(row) {
+
+        var query = true;
+        if (filter) {
+            for (var filterkey in filter) {
+                if (row[filterkey] !== filter[filterkey]) {
+                    query = false;
+                }
+            }
+        }
+        if (query) {
+            result.push(row);
+        }
+    });
+    return result;
 };

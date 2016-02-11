@@ -5,6 +5,7 @@ const Parser = require('../lib/parser');
 const Meta = require('../lib/meta');
 const Maps = require('../components/maps');
 const Charts = require('../components/charts');
+const Info = require('../components/info');
 
 
 exports.init = function() {
@@ -18,7 +19,7 @@ exports.init = function() {
             var h = Meta.screen().canvasHeight;
             var w = Meta.screen().canvasWidth;
 
-            var mapData = Parser({
+            var mapData = Parser.base({
                 data: data,
                 base: 'State',
                 variance: 'Training target',
@@ -33,7 +34,16 @@ exports.init = function() {
                 width: w,
                 scale: h > w ? w * 1.5 : h * 1.5,
                 onClick: function(d) {
-                    window.location = '/state.html?State=' + d.properties.state_name;
+                    var filter = Meta.query();
+                    filter.State = d.properties.state_name;
+                    var infoData = Parser.info({
+                        data: data,
+                        filter: filter
+                    });
+                    Info.table({
+                        target: '#info',
+                        data: infoData
+                    });
                 }
             });
 

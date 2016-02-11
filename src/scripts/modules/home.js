@@ -17,7 +17,7 @@ exports.init = function() {
             var h = Meta.screen().canvasHeight;
             var w = Meta.screen().canvasWidth;
 
-            var mapData = Parser({
+            var mapData = Parser.base({
                 data: data,
                 base: 'State',
                 variance: 'Training target',
@@ -35,7 +35,7 @@ exports.init = function() {
                 }
             });
 
-            var sectorData = Parser({
+            var sectorData = Parser.base({
                 data: data,
                 base: 'Sector',
                 variance: 'Training target',
