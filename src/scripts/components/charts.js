@@ -57,7 +57,8 @@ exports.bubble = function(options) {
         .style('cursor', 'pointer')
         .on('mouseover', function(d) {})
         .on('mouseout', function(d) {})
-        .on('click', options.onClick);
+        .on('click', options.onClick)
+        .on('dblclick', options.onDbClick);
 
     node.append('title')
         .text(function(d) {

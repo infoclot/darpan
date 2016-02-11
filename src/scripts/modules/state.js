@@ -44,6 +44,9 @@ exports.init = function() {
                         target: '#info',
                         data: infoData
                     });
+                },
+                onDbClick: function(d) {
+                    window.location = '/center.html?State=' + Meta.query().State + '&Sector=' + d.className;
                 }
             });
 

@@ -71,7 +71,8 @@ exports.india = function(options) {
             d3.select('#tooltip')
                 .style('display', 'none');
         })
-        .on('click', options.onClick);
+        .on('click', options.onClick)
+        .on('dblclick', options.onDbClick);
 
     // Add state boundries
     svg.append('path')
