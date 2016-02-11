@@ -67,3 +67,39 @@ exports.info = function(options) {
     });
     return result;
 };
+
+exports.center = function(options) {
+    var data = options.data,
+        filter = options.filter;
+
+    var result = [];
+    data.map(function(row) {
+
+        var query = true;
+        if (filter) {
+            for (var filterkey in filter) {
+
+                if (filterkey === 'Sector') {
+                    if (row.Sector1 !== filter[filterkey] &&
+                        row.Sector2 !== filter[filterkey] &&
+                        row.Sector3 !== filter[filterkey] &&
+                        row.Sector4 !== filter[filterkey] &&
+                        row.Sector5 !== filter[filterkey] &&
+                        row.Sector6 !== filter[filterkey] &&
+                        row.Sector7 !== filter[filterkey]) {
+                        query = false;
+                    }
+                } else {
+                    if (row[filterkey] !== filter[filterkey]) {
+                        query = false;
+                    }
+                }
+            }
+        }
+
+        if (query) {
+            result.push(row);
+        }
+    });
+    return result;
+};

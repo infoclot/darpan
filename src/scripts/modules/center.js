@@ -1,7 +1,9 @@
 'use strict';
 
-var Gmap = require('../components/gmap');
 var D3 = require('d3');
+var Gmap = require('../components/gmap');
+var Parser = require('../lib/parser');
+var Meta = require('../lib/meta');
 
 
 exports.init = function() {
@@ -15,7 +17,12 @@ exports.init = function() {
             .on('progress', function() {
                 console.info('progress', D3.event.loaded);
             })
-            .get(function(error, centers) {
+            .get(function(error, data) {
+
+                var centers = Parser.center({
+                    data: data,
+                    filter: Meta.query()
+                });
                 console.log(centers);
                 centers.forEach(function(center) {
 
