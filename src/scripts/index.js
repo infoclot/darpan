@@ -3,6 +3,7 @@
 const Home = require('./modules/home');
 const State = require('./modules/state');
 const Sector = require('./modules/sector');
+const Center = require('./modules/center');
 
 
 if (window.location.pathname === '/') {
@@ -15,4 +16,8 @@ if (window.location.pathname === '/state.html') {
 
 if (window.location.pathname === '/sector.html') {
     Sector.init();
+}
+
+if (window.location.pathname === '/center.html') {
+    Center.init();
 }
