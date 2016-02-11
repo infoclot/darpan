@@ -55,6 +55,8 @@ exports.bubble = function(options) {
             return color(d.value);
         })
         .style('cursor', 'pointer')
+        .on('mouseover', function(d) {})
+        .on('mouseout', function(d) {})
         .on('click', options.onClick);
 
     node.append('title')

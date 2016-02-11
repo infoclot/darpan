@@ -20,7 +20,7 @@ exports.india = function(options) {
         }
     }
     if (!options.target) console.log('No options.target is present');
-    
+
     var data = options.data;
     const bounds = ([3, 5, 10, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);
@@ -55,11 +55,21 @@ exports.india = function(options) {
             return d.properties.state_id;
         })
         .style('cursor', 'pointer')
-        .on('mouseover', function() {
+        .on('mouseover', function(d) {
             d3.select(this).style('fill-opacity', 0.95);
+            d3.select('#tooltip')
+                .style('opacity', 0)
+                .style('display', 'block')
+                .style('left', d3.mouse(d3.select('body')[0][0])[0] - 40 + 'px')
+                .style('top', d3.mouse(d3.select('body')[0][0])[1] - 60 + 'px')
+                .transition()
+                .style('opacity', 1).duration(200);
+            d3.select('#tiptext').html(d.properties.state_name + ':' + d3.format('.2f')(data[d.properties.state_name].value));
         })
         .on('mouseout', function() {
             d3.select(this).style('fill-opacity', 1);
+            d3.select('#tooltip')
+                .style('display', 'none');
         })
         .on('click', options.onClick);
 

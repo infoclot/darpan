@@ -1,6 +1,5 @@
 body {
   // background-color: #51368F;
-  color: #fff;
   color: #444;
   font-family: 'Roboto';
   font-weight: lighter;
@@ -48,4 +47,14 @@ text {
 }
 .u-pull-right {
   float: right
+}
+.tooltip{
+  position: absolute;
+  min-width: 150px;
+  height: 50px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+  border-radius: 4px;
+  display: none
 }
