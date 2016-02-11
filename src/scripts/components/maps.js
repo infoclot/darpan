@@ -64,7 +64,7 @@ exports.india = function(options) {
                 .style('top', d3.mouse(d3.select('body')[0][0])[1] - 60 + 'px')
                 .transition()
                 .style('opacity', 1).duration(200);
-            d3.select('#tiptext').html(d.properties.state_name + ':' + d3.format('.2f')(data[d.properties.state_name].value));
+            d3.select('#tiptext').html(d.properties.state_name + ': ' + d3.format('.2f')(data[d.properties.state_name].value) + ' %');
         })
         .on('mouseout', function() {
             d3.select(this).style('fill-opacity', 1);

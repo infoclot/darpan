@@ -14,7 +14,6 @@ exports.table = function(options) {
         }
     }
     if (!options.target) console.log('No target is present');
-
     var data = options.data;
     // create the table header
     var thead = D3.select('#info thead').selectAll('th')
@@ -22,6 +21,7 @@ exports.table = function(options) {
         .enter().append('th').text(function(d) {
             return d;
         });
+    
     // fill the table
     // create rows
     D3.select('#info tbody').selectAll('tr').remove();

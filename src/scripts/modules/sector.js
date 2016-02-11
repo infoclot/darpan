@@ -19,6 +19,8 @@ exports.init = function() {
             var h = Meta.screen().canvasHeight;
             var w = Meta.screen().canvasWidth;
 
+            D3.select('#state_name').text(Meta.query().Sector);
+
             var mapData = Parser.base({
                 data: data,
                 base: 'State',
@@ -36,6 +38,7 @@ exports.init = function() {
                 onClick: function(d) {
                     var filter = Meta.query();
                     filter.State = d.properties.state_name;
+                    D3.select('#info-header').text(d.properties.state_name);
                     var infoData = Parser.info({
                         data: data,
                         filter: filter

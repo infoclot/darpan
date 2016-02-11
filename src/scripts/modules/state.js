@@ -15,10 +15,12 @@ exports.init = function() {
         })
         .get(function(error, data) {
 
-            D3.select('#state_name').text(Meta.query().State);
-
             var h = Meta.screen().canvasHeight;
             var w = Meta.screen().canvasWidth;
+
+            // Set Metadata for page
+            D3.select('#state_name').text(Meta.query().State);
+            D3.select('#table-holder').style('height', h);
 
             var sectorData = Parser.base({
                 data: data,
@@ -40,6 +42,7 @@ exports.init = function() {
                         data: data,
                         filter: filter
                     });
+                    D3.select('#info-header').text(d.className);
                     Info.table({
                         target: '#info',
                         data: infoData

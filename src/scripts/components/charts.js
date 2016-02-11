@@ -62,7 +62,7 @@ exports.bubble = function(options) {
 
     node.append('title')
         .text(function(d) {
-            return d.className + ': ' + format(d.value);
+            return d.className + ': ' +  d3.format('.2f')(d.value) + ' %';
         });
 
 

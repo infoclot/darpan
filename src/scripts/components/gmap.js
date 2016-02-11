@@ -4,7 +4,7 @@ module.exports = function(target, options) {
 
     const defaults = {
         zoom: 5,
-        center: new google.maps.LatLng(21.0000, 78.0000),
+        center: new google.maps.LatLng(21.0000, 78.0000) ,
         styles: [{
             'featureType': 'water',
             'elementType': 'all',
@@ -111,6 +111,7 @@ module.exports = function(target, options) {
             options[key] = defaults[key];
         }
     }
+    console.log(options.center.lat());
 
 
 

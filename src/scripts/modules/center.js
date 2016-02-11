@@ -10,20 +10,19 @@ exports.init = function() {
 
     google.maps.event.addDomListener(window, 'load', function() {
 
-        var map = Gmap('widget-map', {});
-        var infowindow = new google.maps.InfoWindow();
-
         D3.json('/store/centers.json')
             .on('progress', function() {
                 console.info('progress', D3.event.loaded);
             })
             .get(function(error, data) {
 
+                var map = Gmap('widget-map', {});
+                
+                var infowindow = new google.maps.InfoWindow();
                 var centers = Parser.center({
                     data: data,
                     filter: Meta.query()
                 });
-                console.log(centers);
                 centers.forEach(function(center) {
 
                     var marker = new google.maps.Marker({
