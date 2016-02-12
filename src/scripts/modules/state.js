@@ -20,7 +20,7 @@ exports.init = function() {
 
             // Set Metadata for page
             D3.select('#state_name').text(Meta.query().State);
-            D3.select('#table-holder').style('height', h);
+            // document.getElementsByClassName('table-holder').style.height = '200px';
 
             var sectorData = Parser.base({
                 data: data,

@@ -24,6 +24,9 @@ exports.india = function(options) {
     var data = options.data;
     const bounds = ([3, 5, 10, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);
+
+    if (d3.select(options.target + ' svg')) d3.select(options.target + ' svg').remove();
+
     const svg = d3.select(options.target).append('svg')
         .attr('width', options.width)
         .attr('height', options.height);

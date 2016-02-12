@@ -63,6 +63,7 @@ text {
   overflow-x: scroll;
   overflow-y: scroll;
   padding:5px;
+  height: 600px
 }
 .widget-map{
   width:100%;
@@ -70,4 +71,8 @@ text {
 }
 .sub_head{
   font-size: 25px
+}
+.selector{
+  float: right;
+  width:300px
 }

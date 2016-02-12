@@ -20,6 +20,7 @@ exports.init = function() {
             var w = Meta.screen().canvasWidth;
 
             D3.select('#state_name').text(Meta.query().Sector);
+            // document.getElementsByClassName('table-holder').style.height = '200px';
 
             var mapData = Parser.base({
                 data: data,

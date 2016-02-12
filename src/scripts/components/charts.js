@@ -26,6 +26,8 @@ exports.bubble = function(options) {
     const bounds = ([3, 4, 6, 100]);
     const color = d3.scale.threshold().domain(bounds).range(options.colors);
 
+    if (d3.select(options.target + ' svg')) d3.select(options.target + ' svg').remove();
+
     var svg = d3.select(options.target).append('svg')
         .attr('width', options.diameter)
         .attr('height', options.diameter)
@@ -62,7 +64,7 @@ exports.bubble = function(options) {
 
     node.append('title')
         .text(function(d) {
-            return d.className + ': ' +  d3.format('.2f')(d.value) + ' %';
+            return d.className + ': ' + d3.format('.2f')(d.value) + ' %';
         });
 
 
