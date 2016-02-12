@@ -8,8 +8,8 @@ const Charts = require('../components/charts');
 const Info = require('../components/info');
 
 
-exports.init = function() {
-    D3.json('/store/glance.json')
+exports.init = function(basePath) {
+    D3.json(basePath + '/store/glance.json')
         .on('progress', function() {
             console.info('progress', D3.event.loaded);
         })
@@ -49,7 +49,7 @@ exports.init = function() {
                     });
                 },
                 onDbClick: function(d) {
-                    window.location = '/center.html?State=' + Meta.query().State + '&Sector=' + d.className;
+                    window.location = 'center.html?State=' + Meta.query().State + '&Sector=' + d.className;
                 }
             });
 

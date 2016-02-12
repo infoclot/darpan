@@ -6,18 +6,21 @@ const Sector = require('./modules/sector');
 const Center = require('./modules/center');
 
 
-if (window.location.pathname === '/') {
-    Home.init();
+var basePath = '/darpan';
+
+
+if (window.location.pathname === basePath + '/' || window.location.pathname === basePath + '/index.html') {
+    Home.init(basePath);
 }
 
-if (window.location.pathname === '/state.html') {
-    State.init();
+if (window.location.pathname === basePath + '/state.html') {
+    State.init(basePath);
 }
 
-if (window.location.pathname === '/sector.html') {
-    Sector.init();
+if (window.location.pathname === basePath + '/sector.html') {
+    Sector.init(basePath);
 }
 
-if (window.location.pathname === '/center.html') {
-    Center.init();
+if (window.location.pathname === basePath + '/center.html') {
+    Center.init(basePath);
 }

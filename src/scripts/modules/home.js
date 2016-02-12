@@ -6,9 +6,9 @@ const Meta = require('../lib/meta');
 const Maps = require('../components/maps');
 const Charts = require('../components/charts');
 
-exports.init = function() {
+exports.init = function(basePath) {
 
-    D3.json('/store/glance.json')
+    D3.json(basePath + '/store/glance.json')
         .on('progress', function() {
             console.info('progress', D3.event.loaded);
         })
@@ -42,7 +42,7 @@ exports.init = function() {
             width: w,
             scale: h > w ? w * 1.5 : h * 1.5,
             onClick: function(d) {
-                window.location = '/state.html?State=' + d.properties.state_name;
+                window.location = 'state.html?State=' + d.properties.state_name;
             }
         });
 
@@ -58,7 +58,7 @@ exports.init = function() {
             data: sectorData,
             diameter: h > w ? w : h,
             onClick: function(d) {
-                window.location = '/sector.html?Sector=' + d.className;
+                window.location = 'sector.html?Sector=' + d.className;
             }
         });
     }
